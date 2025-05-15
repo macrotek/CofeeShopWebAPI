@@ -12,6 +12,5 @@ namespace CofeeShopWebAPI.Models
         public string Description { get; set; }
         public string Price { get; set; }
         public string Images { get; set; }
-        public ICollection<SubMenu> SubMenus { get; set; }
     }
 }
