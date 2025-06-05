@@ -7,7 +7,7 @@ using CofeeShopWebAPI.Models;
 
 namespace CofeeShopWebAPI.DataLayer
 {
-    public class ExpressoDbContext : DbContext //(This class from Entity Framework and it's responsible for database CRUD operations)
+    public class ExpressoDbContext : DbContext //(This class  is from Entity Framework and it's responsible for database CRUD operations)
     {
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
