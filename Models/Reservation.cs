@@ -9,13 +9,13 @@ namespace CofeeShopWebAPI.Models
     public class Reservation
     {
         public int Id { get; set; }
-        [Required]
+        [Required] //This is Data Annotations
         public string Name { get; set; }
         [Required]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage ="Email is not valid")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage ="Email is not valid")] //This is Data Annotations
         public string Email { get; set; }
         [Required]
-        [RegularExpression("^[0-9]*$", ErrorMessage ="Phone number is not valid")]
+        [RegularExpression("^[0-9]*$", ErrorMessage ="Phone number is not valid")] //This is Data Annotations
         public string Phone { get; set; }
         [Required]
         public int TotalPeople { get; set; }
