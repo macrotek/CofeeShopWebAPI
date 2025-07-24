@@ -13,7 +13,18 @@ namespace CofeeShopWebAPI.Controllers
         [HttpGet]
         public IHttpActionResult GetMenus()
         {
-            var result = expDBContext.Menus;
+            var result = expDBContext.Menus.Include("SubMenus");
+            return Ok(result);
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetMenus(int id)
+        {
+            var result = expDBContext.Menus.Include("SubMenus").FirstOrDefault(m => m.Id == id);
+            if(result == null)
+            {
+                return NotFound();
+            }
             return Ok(result);
         }
     }
